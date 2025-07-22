@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Language Selection | भाषा चयन</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function setLanguage(lang) {
+      localStorage.setItem("siteLanguage", lang);
+      window.location.href = `index-${lang}.html`; // Redirect to appropriate version
+    }
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome / स्वागत है</h1>
+  <p>Please choose your preferred language / कृपया अपनी भाषा चुनें:</p>
+
+  <button onclick="setLanguage('en')">English</button>
+  <button onclick="setLanguage('hi')">हिन्दी</button>
+
+</body>
+</html>
